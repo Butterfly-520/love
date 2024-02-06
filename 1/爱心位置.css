@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* CSS Document */
+.A{position: absolute;
+    top: vh;
+    left: vw}
+.A1{position: absolute;
+    top: 30vh;
+    left: 55vw}
+.A2{position: absolute;
+    top: 60vh;
+    left: 65vw}
+.A3{position: absolute;
+    top: 10vh;
+    left: 21vw}
+.A4{position: absolute;
+    top: 45vh;
+    left: 36vw}
+.A5{position: absolute;
+    top: 35vh;
+    left: 6vw}
+.A6{position: absolute;
+    top: 48vh;
+    left: 20vw}
+.A7{position: absolute;
+    top: 10vh;
+    left: 90vw}
+.A8{position: absolute;
+    top: 8vh;
+    left: 72vw}
+.A9{position: absolute;
+    top: 60vh;
+    left: 7vw}
+.A10{position: absolute;
+    top: 80vh;
+    left: 3vw}
+.A11{position: absolute;
+    top: 76vh;
+    left: 46vw}
+.A12{position: absolute;
+    top: 20vh;
+    left: 40vw}
+.A13{position: absolute;
+    top: 11vh;
+    left: 32vw}
+.A14{position: absolute;
+    top: 67vh;
+    left: 35vw}
+.A15{position: absolute;
+    top: 7vh;
+    left: 8vw}
+
+.B3{position: absolute;
+    top: 38vh;
+    left: 91vw}
+.B1{position: absolute;
+    top: 69vh;
+    left: 15vw}
+.B2{position: absolute;
+    top: 76vh;
+    left: 77vw}
+
+.C3{position: absolute;
+    top: 16vh;
+    left: 89vw}
+.C1{position: absolute;
+    top: 22vh;
+    left: 16vw}
+.C2{position: absolute;
+    top: 80vh;
+    left: 26vw}
+
+.D3{position: absolute;
+    top: 52vh;
+    left: 89vw}
+.D1{position: absolute;
+    top: 28vh;
+    left: 44vw}
+.D2{position: absolute;
+    top: 73vh;
+    left: 61vw}
+
+.E1{position: absolute;
+    top: 16vh;
+    left: 49vw}
+.E2{position: absolute;
+    top: 34vh;
+    left: 67vw}
+.E3{position: absolute;
+    top: 27vh;
+    left: 76vw}

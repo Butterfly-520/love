@@ -1,0 +1,162 @@
+@charset "utf-8";
+/* CSS Document */
+/* 开关灯 */
+body {display: flexbox;
+  transition: all 0.5s ease;
+}
+body.day-mode {
+background-color: white;
+color: black;
+}
+body.night-mode {
+background-color: black;
+color: white;
+}
+.开关灯位置 {
+  display: flex;
+  position: fixed;
+  right: 0;
+  top: 0;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
+}
+.翻转卡片位置{display: flex;
+  margin-top: 15%;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;}
+
+
+/* 翻转卡片图片cover */
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 翻转卡片 */
+.card {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+  }
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+  }
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  .card-front {
+    background-image: url(1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    /* border: 10px solid #6A2C70; */
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(0deg);
+  }
+  .card-back {
+    background-image: url(1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    /* border: 10px solid #F08A5D; */
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(180deg);
+  }
+#checkbox {
+  display: none;
+}
+.switch {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background-color: rgb(99, 99, 99);
+  border-radius: 50%;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgb(126, 126, 126);
+  box-shadow: 0px 0px 3px rgb(2, 2, 2) inset;
+}
+.switch svg {
+  width: 1.2em;
+}
+.switch svg path {
+  fill: rgb(48, 48, 48);
+}
+#checkbox:checked + .switch {
+  box-shadow: 0px 0px 1px rgb(151, 243, 255) inset,
+    0px 0px 2px rgb(151, 243, 255) inset, 0px 0px 10px rgb(151, 243, 255) inset,
+    0px 0px 40px rgb(151, 243, 255), 0px 0px 100px rgb(151, 243, 255),
+    0px 0px 5px rgb(151, 243, 255);
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(146, 180, 184);
+}
+#checkbox:checked + .switch svg {
+  filter: drop-shadow(0px 0px 5px rgb(151, 243, 255));
+}
+#checkbox:checked + .switch svg path {
+  fill: rgb(255, 255, 255);
+}
+
+/* 开关灯 */
+#checkbox {
+  display: none;
+}
+.switch {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background-color: rgb(99, 99, 99);
+  border-radius: 50%;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgb(126, 126, 126);
+  box-shadow: 0px 0px 3px rgb(2, 2, 2) inset;
+}
+.switch svg {
+  width: 1.2em;
+}
+.switch svg path {
+  fill: rgb(48, 48, 48);
+}
+#checkbox:checked + .switch {
+  box-shadow: 0px 0px 1px rgb(151, 243, 255) inset,
+    0px 0px 2px rgb(151, 243, 255) inset, 0px 0px 10px rgb(151, 243, 255) inset,
+    0px 0px 40px rgb(151, 243, 255), 0px 0px 100px rgb(151, 243, 255),
+    0px 0px 5px rgb(151, 243, 255);
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(146, 180, 184);
+}
+#checkbox:checked + .switch svg {
+  filter: drop-shadow(0px 0px 5px rgb(151, 243, 255));
+}
+#checkbox:checked + .switch svg path {
+  fill: rgb(255, 255, 255);
+}

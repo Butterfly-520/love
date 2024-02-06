@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="../logo/favicon.ico" type="image/x-icon">
+<title>星河</title>
+<style>
+	a{text-decoration: none;}
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;      /* 新添加的代码，使内容居中 */
+      justify-content: center;  /* 新添加的代码，使内容水平居中 */
+      align-items: center;   /* 新添加的代码，使内容垂直居中 */
+    }
+
+    .content {    /* 新添加的代码，定义内容的样式 */
+      position: absolute;  /* 新添加的代码，使内容居于页面顶部 */
+      color: white;   /* 新添加的代码，设置内容的颜色 */
+      font-size: 4em;   /* 新添加的代码，设置内容的字体大小 */
+    }
+
+    .bg {
+      object-fit: cover;
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+    }
+</style>
+</head>
+<body>
+  <!-- muted 放上去就是静音 -->
+  <video width="100%" autoplay muted loop id="myVideo" class="bg">
+  <source src="视频.mp4" type="video/mp4">
+</video>
+
+<div class="content">  <!-- 新添加的代码，添加内容 -->
+    <a href="../三个链接/三个链接.html">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</a>  <!-- 新添加的代码，添加显示的文字 -->
+</div>  <!-- 新添加的代码，结束内容div -->
+
+</body>
+</html>

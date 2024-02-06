@@ -1,0 +1,510 @@
+@charset "utf-8";
+/* CSS Document */
+
+.heart-container-紫色 {
+  --heart-color: rgb(172, 11, 230);
+  position: relative;
+  width: 50px;
+  height: 50px;
+  transition: .3s;
+}
+.heart-container-紫色 .checkbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 20;
+  cursor: pointer;
+}
+.heart-container-紫色 .svg-container-紫色 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heart-container-紫色 .svg-outliner-紫色,
+        .heart-container-紫色 .svg-filled-紫色 {
+  fill: var(--heart-color);
+  position: absolute;
+}
+.heart-container-紫色 .svg-filled-紫色 {
+  animation: keyframes-svg-filled-紫色 1s;
+  display: none;
+}
+.heart-container-紫色 .svg-celebrate-紫色 {
+  position: absolute;
+  animation: keyframes-svg-celebrate-紫色 .5s;
+  animation-fill-mode: forwards;
+  display: none;
+  stroke: var(--heart-color);
+  fill: var(--heart-color);
+  stroke-width: 2px;
+}
+.heart-container-紫色 .checkbox:checked~.svg-container-紫色 .svg-filled-紫色 {
+  display: block
+}
+.heart-container-紫色 .checkbox:checked~.svg-container-紫色 .svg-celebrate-紫色 {
+  display: block
+}
+@keyframes keyframes-svg-filled-紫色 {
+  0% {
+    transform: scale(0);
+  }
+
+  25% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1);
+    filter: brightness(1.5);
+  }
+}
+@keyframes keyframes-svg-celebrate-紫色 {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    filter: brightness(1.5);
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+    display: none;
+  }
+}
+
+.heart-container-更改 {
+  --heart-color: rgb(25, 201, 255);
+  position: relative;
+  width: 50px;
+  height: 50px;
+  transition: .3s;
+}
+
+.heart-container-更改 .checkbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.heart-container-更改 .svg-container-更改 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart-container-更改 .svg-outliner-更改,
+        .heart-container-更改 .svg-filled-更改 {
+  fill: var(--heart-color);
+  position: absolute;
+}
+
+.heart-container-更改 .svg-filled-更改 {
+  animation: keyframes-svg-filled-更改 1s;
+  display: none;
+}
+
+.heart-container-更改 .svg-celebrate-更改 {
+  position: absolute;
+  animation: keyframes-svg-celebrate-更改 .5s;
+  animation-fill-mode: forwards;
+  display: none;
+  stroke: var(--heart-color);
+  fill: var(--heart-color);
+  stroke-width: 2px;
+}
+
+.heart-container-更改 .checkbox:checked~.svg-container-更改 .svg-filled-更改 {
+  display: block
+}
+
+.heart-container-更改 .checkbox:checked~.svg-container-更改 .svg-celebrate-更改 {
+  display: block
+}
+
+@keyframes keyframes-svg-filled-更改 {
+  0% {
+    transform: scale(0);
+  }
+
+  25% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1);
+    filter: brightness(1.5);
+  }
+}
+
+@keyframes keyframes-svg-celebrate-更改 {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    filter: brightness(1.5);
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+    display: none;
+  }
+}
+
+.heart-container-黄色 {
+  --heart-color: rgb(236, 255, 65);
+  position: relative;
+  width: 50px;
+  height: 50px;
+  transition: .3s;
+}
+
+.heart-container-黄色 .checkbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.heart-container-黄色 .svg-container-黄色 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart-container-黄色 .svg-outliner-黄色,
+        .heart-container-黄色 .svg-filled-黄色 {
+  fill: var(--heart-color);
+  position: absolute;
+}
+
+.heart-container-黄色 .svg-filled-黄色 {
+  animation: keyframes-svg-filled-黄色 1s;
+  display: none;
+}
+
+.heart-container-黄色 .svg-celebrate-黄色 {
+  position: absolute;
+  animation: keyframes-svg-celebrate-黄色 .5s;
+  animation-fill-mode: forwards;
+  display: none;
+  stroke: var(--heart-color);
+  fill: var(--heart-color);
+  stroke-width: 2px;
+}
+
+.heart-container-黄色 .checkbox:checked~.svg-container-黄色 .svg-filled-黄色 {
+  display: block
+}
+
+.heart-container-黄色 .checkbox:checked~.svg-container-黄色 .svg-celebrate-黄色 {
+  display: block
+}
+
+@keyframes keyframes-svg-filled-黄色 {
+  0% {
+    transform: scale(0);
+  }
+
+  25% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1);
+    filter: brightness(1.5);
+  }
+}
+
+@keyframes keyframes-svg-celebrate-黄色 {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    filter: brightness(1.5);
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+    display: none;
+  }
+}
+
+
+.heart-container-粉色 {
+  --heart-color: rgb(255, 91, 137);
+  position: relative;
+  width: 50px;
+  height: 50px;
+  transition: .3s;
+}
+
+.heart-container-粉色 .checkbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.heart-container-粉色 .svg-container-粉色 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart-container-粉色 .svg-outliner-粉色,
+        .heart-container-粉色 .svg-filled-粉色 {
+  fill: var(--heart-color);
+  position: absolute;
+}
+
+.heart-container-粉色 .svg-filled-粉色 {
+  animation: keyframes-svg-filled-粉色 1s;
+  display: none;
+}
+
+.heart-container-粉色 .svg-celebrate-粉色 {
+  position: absolute;
+  animation: keyframes-svg-celebrate-粉色 .5s;
+  animation-fill-mode: forwards;
+  display: none;
+  stroke: var(--heart-color);
+  fill: var(--heart-color);
+  stroke-width: 2px;
+}
+
+.heart-container-粉色 .checkbox:checked~.svg-container-粉色 .svg-filled-粉色 {
+  display: block
+}
+
+.heart-container-粉色 .checkbox:checked~.svg-container-粉色 .svg-celebrate-粉色 {
+  display: block
+}
+
+@keyframes keyframes-svg-filled-粉色 {
+  0% {
+    transform: scale(0);
+  }
+
+  25% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1);
+    filter: brightness(1.5);
+  }
+}
+
+@keyframes keyframes-svg-celebrate-粉色 {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    filter: brightness(1.5);
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+    display: none;
+  }
+}
+
+.heart-container-蓝色 {
+  --heart-color: #2a99ff;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  transition: .3s;
+}
+
+.heart-container-蓝色 .checkbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.heart-container-蓝色 .svg-container-蓝色 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart-container-蓝色 .svg-outliner-蓝色,
+        .heart-container-蓝色 .svg-filled-蓝色 {
+  fill: var(--heart-color);
+  position: absolute;
+}
+
+.heart-container-蓝色 .svg-filled-蓝色 {
+  animation: keyframes-svg-filled-蓝色 1s;
+  display: none;
+}
+
+.heart-container-蓝色 .svg-celebrate-蓝色 {
+  position: absolute;
+  animation: keyframes-svg-celebrate-蓝色 .5s;
+  animation-fill-mode: forwards;
+  display: none;
+  stroke: var(--heart-color);
+  fill: var(--heart-color);
+  stroke-width: 2px;
+}
+
+.heart-container-蓝色 .checkbox:checked~.svg-container-蓝色 .svg-filled-蓝色 {
+  display: block
+}
+
+.heart-container-蓝色 .checkbox:checked~.svg-container-蓝色 .svg-celebrate-蓝色 {
+  display: block
+}
+
+@keyframes keyframes-svg-filled-蓝色 {
+  0% {
+    transform: scale(0);
+  }
+
+  25% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1);
+    filter: brightness(1.5);
+  }
+}
+
+@keyframes keyframes-svg-celebrate-蓝色 {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    filter: brightness(1.5);
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+    display: none;
+  }
+}
+
+.heart-container-红色 {
+  --heart-color: hsl(0, 100%, 55%);
+  position: relative;
+  width: 50px;
+  height: 50px;
+  transition: .3s;
+}
+
+.heart-container-红色 .checkbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.heart-container-红色 .svg-container-红色 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart-container-红色 .svg-outliner-红色,
+        .heart-container-红色 .svg-filled-红色 {
+  fill: var(--heart-color);
+  position: absolute;
+}
+
+.heart-container-红色 .svg-filled-红色 {
+  animation: keyframes-svg-filled-红色 1s;
+  display: none;
+}
+
+.heart-container-红色 .svg-celebrate-红色 {
+  position: absolute;
+  animation: keyframes-svg-celebrate-红色 .5s;
+  animation-fill-mode: forwards;
+  display: none;
+  stroke: var(--heart-color);
+  fill: var(--heart-color);
+  stroke-width: 2px;
+}
+
+.heart-container-红色 .checkbox:checked~.svg-container-红色 .svg-filled-红色 {
+  display: block
+}
+
+.heart-container-红色 .checkbox:checked~.svg-container-红色 .svg-celebrate-红色 {
+  display: block
+}
+
+@keyframes keyframes-svg-filled-红色 {
+  0% {
+    transform: scale(0);
+  }
+
+  25% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1);
+    filter: brightness(1.5);
+  }
+}
+
+@keyframes keyframes-svg-celebrate-红色 {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    filter: brightness(1.5);
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+    display: none;
+  }
+}

@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html>
+    <link rel="icon" href="../logo/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="1.css">
+    <link rel="stylesheet" type="text/css" href="翻转卡片+开关灯.css">
+    <link rel="stylesheet" type="text/css" href="爱心.css">
+    <link rel="stylesheet" type="text/css" href="爱心位置.css">
+    <link rel="stylesheet" type="text/css" href="列表.css">
+    <script src="1.js"></script>
+    <style>
+        a{text-decoration: none;
+        color: white;}
+    </style>
+    <title>星河</title>
+<body class="day-mode">
+    <div class="开关灯位置">
+        <input id="checkbox" type="checkbox" /><!-- 开关灯 -->
+        <label class="switch" for="checkbox">
+          <svg onclick="changeMode()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="slider">
+            <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V256c0 17.7 14.3 32 32 32s32-14.3 32-32V32zM143.5 120.6c13.6-11.3 15.4-31.5 4.1-45.1s-31.5-15.4-45.1-4.1C49.7 115.4 16 181.8 16 256c0 132.5 107.5 240 240 240s240-107.5 240-240c0-74.2-33.8-140.6-86.6-184.6c-13.6-11.3-33.8-9.4-45.1 4.1s-9.4 33.8 4.1 45.1c38.9 32.3 63.5 81 63.5 135.4c0 97.2-78.8 176-176 176s-176-78.8-176-176c0-54.4 24.7-103.1 63.5-135.4z"></path>
+          </svg>
+        </label></div><!-- 开关灯 -->
+        <div class="card 翻转卡片位置"><!-- 翻转卡片 -->
+            <div class="card-inner">
+              <div class="card-front">
+                <!-- AAA -->
+              </div>
+              <div class="card-back">
+                <div id="时间计算器" class="时间计算器"></div><!-- 时间 -->
+                <script>
+                    function updateDay() {
+                        let startDay = new Date("03/05/2020");  // 设定始发日期
+                        let today = new Date();  // 获取当前日期
+                        let diff = Math.floor((today - startDay) / 86400000);  // 计算日期差距
+                        let startNum = 0;  // 初始天数设置为0
+                    
+                        document.getElementById("时间计算器").innerHTML = startNum + diff;
+                    }
+                    updateDay(); // 首次打开页面时调用一次
+                    setInterval(updateDay, 86400000);  // 每天更新一次
+                    </script><!-- 时间 -->
+              </div>
+            </div>
+        </div><!-- 翻转卡片 -->
+        <div class="列表位置"><!-- 列表 -->
+            <label class="checkbox-label">
+              <input type="checkbox" class="checkbox" />
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1em"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="container"></span>
+              爱我</label
+            >
+          
+            <label class="checkbox-label">
+              <input type="checkbox" class="checkbox" />
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1em"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="container"></span>
+              想我</label
+            >
+          
+            <label class="checkbox-label">
+              <input type="checkbox" class="checkbox" />
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1em"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="container"></span>
+              给我买兰博基尼！</label
+            >
+          
+            <label class="checkbox-label">
+              <input type="checkbox" class="checkbox" />
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1em"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="container"></span>
+              养我</label
+            >
+            <label class="checkbox-label">
+              <input type="checkbox" class="checkbox" />
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1em"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="container"></span>
+              我不管！</label
+            >
+            <label class="checkbox-label">
+              <input type="checkbox" class="checkbox" />
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1em"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="container"></span>
+              <a href="../index.html">都做到啦！</a></label
+            >
+          </div><!-- 列表 -->
+<!-- 爱心 -->
+        <div class="heart-container-蓝色 A1" title="Like">
+  <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+  <div class="svg-container-蓝色">
+      <svg viewBox="0 0 24 24" class="svg-outliner-蓝色" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+          </path>
+      </svg>
+      <svg viewBox="0 0 24 24" class="svg-filled-蓝色" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+          </path>
+      </svg>
+      <svg class="svg-celebrate-蓝色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="10,10 20,20"></polygon>
+          <polygon points="10,50 20,50"></polygon>
+          <polygon points="20,80 30,70"></polygon>
+          <polygon points="90,10 80,20"></polygon>
+          <polygon points="90,50 80,50"></polygon>
+          <polygon points="80,80 70,70"></polygon>
+      </svg>
+  </div>
+        </div>
+        <div class="heart-container-粉色 B1" title="Like">
+            <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+            <div class="svg-container-粉色">
+                <svg viewBox="0 0 24 24" class="svg-outliner-粉色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                    </path>
+                </svg>
+                <svg viewBox="0 0 24 24" class="svg-filled-粉色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                    </path>
+                </svg>
+                <svg class="svg-celebrate-粉色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="10,10 20,20"></polygon>
+                    <polygon points="10,50 20,50"></polygon>
+                    <polygon points="20,80 30,70"></polygon>
+                    <polygon points="90,10 80,20"></polygon>
+                    <polygon points="90,50 80,50"></polygon>
+                    <polygon points="80,80 70,70"></polygon>
+                </svg>
+            </div>
+        </div>
+        <div class="heart-container-红色 C1" title="Like">
+            <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+            <div class="svg-container-红色">
+                <svg viewBox="0 0 24 24" class="svg-outliner-红色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                    </path>
+                </svg>
+                <svg viewBox="0 0 24 24" class="svg-filled-红色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                    </path>
+                </svg>
+                <svg class="svg-celebrate-红色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="10,10 20,20"></polygon>
+                    <polygon points="10,50 20,50"></polygon>
+                    <polygon points="20,80 30,70"></polygon>
+                    <polygon points="90,10 80,20"></polygon>
+                    <polygon points="90,50 80,50"></polygon>
+                    <polygon points="80,80 70,70"></polygon>
+                </svg>
+            </div>
+        </div>
+        <div class="heart-container-黄色 D1" title="Like">
+            <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+            <div class="svg-container-黄色">
+                <svg viewBox="0 0 24 24" class="svg-outliner-黄色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                    </path>
+                </svg>
+                <svg viewBox="0 0 24 24" class="svg-filled-黄色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                    </path>
+                </svg>
+                <svg class="svg-celebrate-黄色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="10,10 20,20"></polygon>
+                    <polygon points="10,50 20,50"></polygon>
+                    <polygon points="20,80 30,70"></polygon>
+                    <polygon points="90,10 80,20"></polygon>
+                    <polygon points="90,50 80,50"></polygon>
+                    <polygon points="80,80 70,70"></polygon>
+                </svg>
+            </div>
+        </div>
+        <div class="heart-container-紫色 E1" title="Like">
+            <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+            <div class="svg-container-紫色">
+                <svg viewBox="0 0 24 24" class="svg-outliner-紫色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                    </path>
+                </svg>
+                <svg viewBox="0 0 24 24" class="svg-filled-紫色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                    </path>
+                </svg>
+                <svg class="svg-celebrate-紫色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="10,10 20,20"></polygon>
+                    <polygon points="10,50 20,50"></polygon>
+                    <polygon points="20,80 30,70"></polygon>
+                    <polygon points="90,10 80,20"></polygon>
+                    <polygon points="90,50 80,50"></polygon>
+                    <polygon points="80,80 70,70"></polygon>
+                </svg>
+            </div>
+        </div>
+        <div class="heart-container-蓝色 A2" title="Like">
+  <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+  <div class="svg-container-蓝色">
+      <svg viewBox="0 0 24 24" class="svg-outliner-蓝色" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+          </path>
+      </svg>
+      <svg viewBox="0 0 24 24" class="svg-filled-蓝色" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+          </path>
+      </svg>
+      <svg class="svg-celebrate-蓝色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="10,10 20,20"></polygon>
+          <polygon points="10,50 20,50"></polygon>
+          <polygon points="20,80 30,70"></polygon>
+          <polygon points="90,10 80,20"></polygon>
+          <polygon points="90,50 80,50"></polygon>
+          <polygon points="80,80 70,70"></polygon>
+      </svg>
+  </div>
+        </div>
+        <div class="heart-container-粉色 B2" title="Like">
+            <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+            <div class="svg-container-粉色">
+                <svg viewBox="0 0 24 24" class="svg-outliner-粉色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                    </path>
+                </svg>
+                <svg viewBox="0 0 24 24" class="svg-filled-粉色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                    </path>
+                </svg>
+                <svg class="svg-celebrate-粉色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="10,10 20,20"></polygon>
+                    <polygon points="10,50 20,50"></polygon>
+                    <polygon points="20,80 30,70"></polygon>
+                    <polygon points="90,10 80,20"></polygon>
+                    <polygon points="90,50 80,50"></polygon>
+                    <polygon points="80,80 70,70"></polygon>
+                </svg>
+            </div>
+        </div>
+        <div class="heart-container-红色 C2" title="Like">
+            <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+            <div class="svg-container-红色">
+                <svg viewBox="0 0 24 24" class="svg-outliner-红色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                    </path>
+                </svg>
+                <svg viewBox="0 0 24 24" class="svg-filled-红色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                    </path>
+                </svg>
+                <svg class="svg-celebrate-红色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="10,10 20,20"></polygon>
+                    <polygon points="10,50 20,50"></polygon>
+                    <polygon points="20,80 30,70"></polygon>
+                    <polygon points="90,10 80,20"></polygon>
+                    <polygon points="90,50 80,50"></polygon>
+                    <polygon points="80,80 70,70"></polygon>
+                </svg>
+            </div>
+        </div>
+        <div class="heart-container-黄色 D2" title="Like">
+            <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+            <div class="svg-container-黄色">
+                <svg viewBox="0 0 24 24" class="svg-outliner-黄色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                    </path>
+                </svg>
+                <svg viewBox="0 0 24 24" class="svg-filled-黄色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                    </path>
+                </svg>
+                <svg class="svg-celebrate-黄色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="10,10 20,20"></polygon>
+                    <polygon points="10,50 20,50"></polygon>
+                    <polygon points="20,80 30,70"></polygon>
+                    <polygon points="90,10 80,20"></polygon>
+                    <polygon points="90,50 80,50"></polygon>
+                    <polygon points="80,80 70,70"></polygon>
+                </svg>
+            </div>
+        </div>
+        <div class="heart-container-紫色 E2" title="Like">
+            <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+            <div class="svg-container-紫色">
+                <svg viewBox="0 0 24 24" class="svg-outliner-紫色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                    </path>
+                </svg>
+                <svg viewBox="0 0 24 24" class="svg-filled-紫色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                    </path>
+                </svg>
+                <svg class="svg-celebrate-紫色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="10,10 20,20"></polygon>
+                    <polygon points="10,50 20,50"></polygon>
+                    <polygon points="20,80 30,70"></polygon>
+                    <polygon points="90,10 80,20"></polygon>
+                    <polygon points="90,50 80,50"></polygon>
+                    <polygon points="80,80 70,70"></polygon>
+                </svg>
+            </div>
+        </div>
+        <div class="heart-container-蓝色 A3" title="Like">
+  <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+  <div class="svg-container-蓝色">
+      <svg viewBox="0 0 24 24" class="svg-outliner-蓝色" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+          </path>
+      </svg>
+      <svg viewBox="0 0 24 24" class="svg-filled-蓝色" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+          </path>
+      </svg>
+      <svg class="svg-celebrate-蓝色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="10,10 20,20"></polygon>
+          <polygon points="10,50 20,50"></polygon>
+          <polygon points="20,80 30,70"></polygon>
+          <polygon points="90,10 80,20"></polygon>
+          <polygon points="90,50 80,50"></polygon>
+          <polygon points="80,80 70,70"></polygon>
+      </svg>
+  </div>
+        </div>
+        <div class="heart-container-粉色 B3" title="Like">
+            <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+            <div class="svg-container-粉色">
+                <svg viewBox="0 0 24 24" class="svg-outliner-粉色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                    </path>
+                </svg>
+                <svg viewBox="0 0 24 24" class="svg-filled-粉色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                    </path>
+                </svg>
+                <svg class="svg-celebrate-粉色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="10,10 20,20"></polygon>
+                    <polygon points="10,50 20,50"></polygon>
+                    <polygon points="20,80 30,70"></polygon>
+                    <polygon points="90,10 80,20"></polygon>
+                    <polygon points="90,50 80,50"></polygon>
+                    <polygon points="80,80 70,70"></polygon>
+                </svg>
+            </div>
+        </div>
+        <div class="heart-container-红色 C3" title="Like">
+            <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+            <div class="svg-container-红色">
+                <svg viewBox="0 0 24 24" class="svg-outliner-红色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                    </path>
+                </svg>
+                <svg viewBox="0 0 24 24" class="svg-filled-红色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                    </path>
+                </svg>
+                <svg class="svg-celebrate-红色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="10,10 20,20"></polygon>
+                    <polygon points="10,50 20,50"></polygon>
+                    <polygon points="20,80 30,70"></polygon>
+                    <polygon points="90,10 80,20"></polygon>
+                    <polygon points="90,50 80,50"></polygon>
+                    <polygon points="80,80 70,70"></polygon>
+                </svg>
+            </div>
+        </div>
+        <div class="heart-container-黄色 D3" title="Like">
+            <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+            <div class="svg-container-黄色">
+                <svg viewBox="0 0 24 24" class="svg-outliner-黄色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                    </path>
+                </svg>
+                <svg viewBox="0 0 24 24" class="svg-filled-黄色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                    </path>
+                </svg>
+                <svg class="svg-celebrate-黄色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="10,10 20,20"></polygon>
+                    <polygon points="10,50 20,50"></polygon>
+                    <polygon points="20,80 30,70"></polygon>
+                    <polygon points="90,10 80,20"></polygon>
+                    <polygon points="90,50 80,50"></polygon>
+                    <polygon points="80,80 70,70"></polygon>
+                </svg>
+            </div>
+        </div>
+        <div class="heart-container-紫色 E3" title="Like">
+            <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+            <div class="svg-container-紫色">
+                <svg viewBox="0 0 24 24" class="svg-outliner-紫色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                    </path>
+                </svg>
+                <svg viewBox="0 0 24 24" class="svg-filled-紫色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                    </path>
+                </svg>
+                <svg class="svg-celebrate-紫色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="10,10 20,20"></polygon>
+                    <polygon points="10,50 20,50"></polygon>
+                    <polygon points="20,80 30,70"></polygon>
+                    <polygon points="90,10 80,20"></polygon>
+                    <polygon points="90,50 80,50"></polygon>
+                    <polygon points="80,80 70,70"></polygon>
+                </svg>
+            </div>
+        </div>
+        <div class="heart-container-蓝色 A4" title="Like">
+  <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+  <div class="svg-container-蓝色">
+      <svg viewBox="0 0 24 24" class="svg-outliner-蓝色" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+          </path>
+      </svg>
+      <svg viewBox="0 0 24 24" class="svg-filled-蓝色" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+          </path>
+      </svg>
+      <svg class="svg-celebrate-蓝色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="10,10 20,20"></polygon>
+          <polygon points="10,50 20,50"></polygon>
+          <polygon points="20,80 30,70"></polygon>
+          <polygon points="90,10 80,20"></polygon>
+          <polygon points="90,50 80,50"></polygon>
+          <polygon points="80,80 70,70"></polygon>
+      </svg>
+  </div>
+        </div>
+        <div class="heart-container-粉色 A5" title="Like">
+            <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+            <div class="svg-container-粉色">
+                <svg viewBox="0 0 24 24" class="svg-outliner-粉色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                    </path>
+                </svg>
+                <svg viewBox="0 0 24 24" class="svg-filled-粉色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                    </path>
+                </svg>
+                <svg class="svg-celebrate-粉色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="10,10 20,20"></polygon>
+                    <polygon points="10,50 20,50"></polygon>
+                    <polygon points="20,80 30,70"></polygon>
+                    <polygon points="90,10 80,20"></polygon>
+                    <polygon points="90,50 80,50"></polygon>
+                    <polygon points="80,80 70,70"></polygon>
+                </svg>
+            </div>
+        </div>
+        <div class="heart-container-红色 A6" title="Like">
+            <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+            <div class="svg-container-红色">
+                <svg viewBox="0 0 24 24" class="svg-outliner-红色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                    </path>
+                </svg>
+                <svg viewBox="0 0 24 24" class="svg-filled-红色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                    </path>
+                </svg>
+                <svg class="svg-celebrate-红色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="10,10 20,20"></polygon>
+                    <polygon points="10,50 20,50"></polygon>
+                    <polygon points="20,80 30,70"></polygon>
+                    <polygon points="90,10 80,20"></polygon>
+                    <polygon points="90,50 80,50"></polygon>
+                    <polygon points="80,80 70,70"></polygon>
+                </svg>
+            </div>
+        </div>
+        <div class="heart-container-黄色 A7" title="Like">
+            <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+            <div class="svg-container-黄色">
+                <svg viewBox="0 0 24 24" class="svg-outliner-黄色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                    </path>
+                </svg>
+                <svg viewBox="0 0 24 24" class="svg-filled-黄色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                    </path>
+                </svg>
+                <svg class="svg-celebrate-黄色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="10,10 20,20"></polygon>
+                    <polygon points="10,50 20,50"></polygon>
+                    <polygon points="20,80 30,70"></polygon>
+                    <polygon points="90,10 80,20"></polygon>
+                    <polygon points="90,50 80,50"></polygon>
+                    <polygon points="80,80 70,70"></polygon>
+                </svg>
+            </div>
+        </div>
+        <div class="heart-container-紫色 A8" title="Like">
+            <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+            <div class="svg-container-紫色">
+                <svg viewBox="0 0 24 24" class="svg-outliner-紫色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                    </path>
+                </svg>
+                <svg viewBox="0 0 24 24" class="svg-filled-紫色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                    </path>
+                </svg>
+                <svg class="svg-celebrate-紫色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="10,10 20,20"></polygon>
+                    <polygon points="10,50 20,50"></polygon>
+                    <polygon points="20,80 30,70"></polygon>
+                    <polygon points="90,10 80,20"></polygon>
+                    <polygon points="90,50 80,50"></polygon>
+                    <polygon points="80,80 70,70"></polygon>
+                </svg>
+            </div>
+        </div>
+        <div class="heart-container-蓝色 A9" title="Like">
+  <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+  <div class="svg-container-蓝色">
+      <svg viewBox="0 0 24 24" class="svg-outliner-蓝色" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+          </path>
+      </svg>
+      <svg viewBox="0 0 24 24" class="svg-filled-蓝色" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+          </path>
+      </svg>
+      <svg class="svg-celebrate-蓝色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="10,10 20,20"></polygon>
+          <polygon points="10,50 20,50"></polygon>
+          <polygon points="20,80 30,70"></polygon>
+          <polygon points="90,10 80,20"></polygon>
+          <polygon points="90,50 80,50"></polygon>
+          <polygon points="80,80 70,70"></polygon>
+      </svg>
+  </div>
+        </div>
+        <div class="heart-container-粉色 A10" title="Like">
+            <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+            <div class="svg-container-粉色">
+                <svg viewBox="0 0 24 24" class="svg-outliner-粉色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                    </path>
+                </svg>
+                <svg viewBox="0 0 24 24" class="svg-filled-粉色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                    </path>
+                </svg>
+                <svg class="svg-celebrate-粉色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="10,10 20,20"></polygon>
+                    <polygon points="10,50 20,50"></polygon>
+                    <polygon points="20,80 30,70"></polygon>
+                    <polygon points="90,10 80,20"></polygon>
+                    <polygon points="90,50 80,50"></polygon>
+                    <polygon points="80,80 70,70"></polygon>
+                </svg>
+            </div>
+        </div>
+        <div class="heart-container-红色 A11" title="Like">
+            <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+            <div class="svg-container-红色">
+                <svg viewBox="0 0 24 24" class="svg-outliner-红色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                    </path>
+                </svg>
+                <svg viewBox="0 0 24 24" class="svg-filled-红色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                    </path>
+                </svg>
+                <svg class="svg-celebrate-红色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="10,10 20,20"></polygon>
+                    <polygon points="10,50 20,50"></polygon>
+                    <polygon points="20,80 30,70"></polygon>
+                    <polygon points="90,10 80,20"></polygon>
+                    <polygon points="90,50 80,50"></polygon>
+                    <polygon points="80,80 70,70"></polygon>
+                </svg>
+            </div>
+        </div>
+        <div class="heart-container-黄色 A12" title="Like">
+            <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+            <div class="svg-container-黄色">
+                <svg viewBox="0 0 24 24" class="svg-outliner-黄色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                    </path>
+                </svg>
+                <svg viewBox="0 0 24 24" class="svg-filled-黄色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                    </path>
+                </svg>
+                <svg class="svg-celebrate-黄色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="10,10 20,20"></polygon>
+                    <polygon points="10,50 20,50"></polygon>
+                    <polygon points="20,80 30,70"></polygon>
+                    <polygon points="90,10 80,20"></polygon>
+                    <polygon points="90,50 80,50"></polygon>
+                    <polygon points="80,80 70,70"></polygon>
+                </svg>
+            </div>
+        </div>
+        <div class="heart-container-紫色 A13" title="Like">
+            <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+            <div class="svg-container-紫色">
+                <svg viewBox="0 0 24 24" class="svg-outliner-紫色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                    </path>
+                </svg>
+                <svg viewBox="0 0 24 24" class="svg-filled-紫色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                    </path>
+                </svg>
+                <svg class="svg-celebrate-紫色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="10,10 20,20"></polygon>
+                    <polygon points="10,50 20,50"></polygon>
+                    <polygon points="20,80 30,70"></polygon>
+                    <polygon points="90,10 80,20"></polygon>
+                    <polygon points="90,50 80,50"></polygon>
+                    <polygon points="80,80 70,70"></polygon>
+                </svg>
+            </div>
+        </div>
+        <div class="heart-container-紫色 A14" title="Like">
+            <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+            <div class="svg-container-紫色">
+                <svg viewBox="0 0 24 24" class="svg-outliner-紫色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+                    </path>
+                </svg>
+                <svg viewBox="0 0 24 24" class="svg-filled-紫色" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+                    </path>
+                </svg>
+                <svg class="svg-celebrate-紫色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="10,10 20,20"></polygon>
+                    <polygon points="10,50 20,50"></polygon>
+                    <polygon points="20,80 30,70"></polygon>
+                    <polygon points="90,10 80,20"></polygon>
+                    <polygon points="90,50 80,50"></polygon>
+                    <polygon points="80,80 70,70"></polygon>
+                </svg>
+            </div>
+        </div>
+        <div class="heart-container-蓝色 A15" title="Like">
+  <input type="checkbox" class="checkbox" id="Give-It-An-Id">
+  <div class="svg-container-蓝色">
+      <svg viewBox="0 0 24 24" class="svg-outliner-蓝色" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
+          </path>
+      </svg>
+      <svg viewBox="0 0 24 24" class="svg-filled-蓝色" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
+          </path>
+      </svg>
+      <svg class="svg-celebrate-蓝色" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="10,10 20,20"></polygon>
+          <polygon points="10,50 20,50"></polygon>
+          <polygon points="20,80 30,70"></polygon>
+          <polygon points="90,10 80,20"></polygon>
+          <polygon points="90,50 80,50"></polygon>
+          <polygon points="80,80 70,70"></polygon>
+      </svg>
+  </div>
+        </div>
+<!-- 爱心 -->
+</body>
+</html>

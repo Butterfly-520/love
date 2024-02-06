@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+.时间计算器{
+    font-size: 130px;
+    font-family: 'Microsoft YaHei', sans-serif;
+    color: rgb(255, 37, 146);
+    animation: fadeIn 2s ease-in-out;
+    }
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+.列表位置{display: flex;
+    margin-top: 15%;
+    margin-bottom: auto;
+    margin-left: 3%;
+    margin-right: auto;}
+
